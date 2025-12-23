@@ -29,18 +29,18 @@ The project focuses on clean UI, mobile-first design, and real-world component s
 ---
 
 ## Live Demo 🌐
-🔗 **Live URL:** [https://your-vercel-link.vercel.app](https://sammunatlanding.vercel.app/)
+🔗 **Live URL:** [https://sammunatlanding.vercel.app](https://sammunatlanding.vercel.app/)
 
 ---
 
 ## Run Locally ⚙️
 
-```bash
+
 git clone https://github.com/karthi1953/sammunat.git
 cd sammunat
 npm install
 npm run dev
-```bash
+
 
 The app will be available at:
 http://localhost:5173
