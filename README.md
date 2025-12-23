@@ -35,7 +35,7 @@ The project focuses on clean UI, mobile-first design, and real-world component s
 
 ## Run Locally ⚙️
 
-```bash
+
 git clone https://github.com/karthi1953/sammunat.git
 cd sammunat
 npm install
