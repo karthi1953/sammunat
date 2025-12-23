@@ -1,16 +1,79 @@
-# React + Vite
+# Sammunat Landing Page 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview 📱
+A responsive single-page landing website built using React.js to showcase Sammunat’s services, mission, and company information.  
+The project focuses on clean UI, mobile-first design, and real-world component structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack 🛠️
+- React.js (Vite)
+- Custom CSS (no external UI libraries)
+- Mobile-first responsive design
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features ✨
+- Clean and professional UI aligned with Sammunat’s brand
+- Fully responsive layout (mobile, tablet, desktop)
+- Mobile hamburger navigation
+- Structured sections:
+  - Hero
+  - About
+  - Features
+  - Solutions
+  - Call-to-Action
+  - Footer
+- Realistic company content (contact, social placeholders)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Demo 🌐
+🔗 **Live URL:** [https://your-vercel-link.vercel.app](https://sammunatlanding.vercel.app/)
+
+---
+
+## Run Locally ⚙️
+
+```bash
+git clone https://github.com/karthi1953/sammunat.git
+cd sammunat
+npm install
+npm run dev
+```bash
+
+The app will be available at:
+http://localhost:5173
+
+## Project Purpose 📌
+
+This project was developed as part of an internship assignment to demonstrate:
+
+- Frontend development skills using React
+- Component-based architecture
+- Responsive UI design
+- Deployment-ready project structure
+
+---
+
+## What I Learned 📚
+
+- Building a complete React application from scratch using Vite
+- Implementing mobile-first responsive layouts
+- Structuring clean and reusable components
+- Working with real-world company requirements
+
+---
+
+## Future Improvements 🚀
+
+- Functional contact form integration
+- SEO optimization
+- Performance enhancements
+- Animations for better user experience
+
+---
+
+## Developed By
+
+**Karthik**
