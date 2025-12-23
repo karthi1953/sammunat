@@ -40,7 +40,8 @@ git clone https://github.com/karthi1953/sammunat.git
 cd sammunat
 npm install
 npm run dev
-```bash
+~~~
+
 
 The app will be available at:
 http://localhost:5173
