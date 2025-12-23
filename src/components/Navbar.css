@@ -99,14 +99,9 @@
     font-size: 16px;
     transition: all 0.3s ease;
     user-select: none;
-    -webkit-tap-highlight-color: transparent; 
   }
   
   .nav-item:hover {
-    color: var(--color-orange);
-  }
-  
-  .nav-item.active {
     color: var(--color-orange);
   }
   
@@ -122,8 +117,7 @@
     border-radius: 1px;
   }
   
-  .nav-item:hover::after,
-  .nav-item.active::after {
+  .nav-item:hover::after {
     width: 100%;
   }
   
@@ -172,26 +166,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: var(--color-dark);
-      transition: all 0.2s ease;
-    }
-    
-    .nav-item:hover {
-      color: var(--color-dark) !important;
-      background-color: transparent !important;
-      padding-left: 0 !important;
-    }
-    
-    .nav-item.active {
-      color: var(--color-orange) !important;
-      background-color: rgba(var(--color-orange-rgb, 255, 107, 53), 0.08);
-      padding-left: 12px;
-      border-radius: 8px;
-      margin: 4px 0;
     }
     
     .nav-item:last-child {
       border-bottom: none;
+    }
+    
+    .nav-item:hover {
+      color: var(--color-orange);
+      background-color: transparent;
+      padding-left: 8px;
     }
     
     .nav-item::after {
@@ -206,33 +190,18 @@
       transform: translateX(0);
     }
     
-    .nav-item.active::after {
+    .nav-item:hover::after {
+      width: auto;
       transform: translateX(4px);
       color: var(--color-orange);
     }
     
-    .nav-item:hover::after {
-      width: auto;
-      transform: translateX(0);
-      color: var(--color-gray);
+    .nav-item::before {
+      display: none;
     }
     
     body.menu-open {
       overflow: hidden;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-    }
-    
-    @media (hover: none) and (pointer: coarse) {
-      .nav-item:hover {
-        color: var(--color-dark) !important;
-        background-color: transparent !important;
-      }
-      
-      .nav-item:hover::after {
-        width: 0 !important;
-      }
     }
   }
   
@@ -287,11 +256,4 @@
   .nav-item,
   .hamburger-line {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  :root {
-    --color-orange: #ff6b35;
-    --color-dark: #333333;
-    --color-white: #ffffff;
-    --color-gray: #666666;
   }

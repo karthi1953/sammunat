@@ -4,7 +4,6 @@ import './Navbar.css'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [activeItem, setActiveItem] = useState(null); 
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
 
@@ -21,15 +20,8 @@ const Navbar = () => {
         !hamburgerRef.current.contains(event.target)
       ) {
         setIsMenuOpen(false);
-        setActiveItem(null); 
       }
     };
-
-    if (isMenuOpen) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
 
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('mousedown', handleClickOutside);
@@ -39,42 +31,35 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
-      document.body.classList.remove('menu-open');
     };
-  }, [isMenuOpen]);
+  }, []);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+    let element = document.getElementById(id);
+    
+    if (!element) {
+      if (id === 'contact') {
+        element = document.getElementById('cta');
+      }
     }
+    
+    if (!element) {
+      return;
+    }
+
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - navbarHeight;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
     setIsMenuOpen(false);
-    setActiveItem(null); 
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
-      setActiveItem(null); 
-    }
-  };
-
-  const handleItemClick = (id) => {
-    setActiveItem(id); 
-    setTimeout(() => {
-      scrollToSection(id);
-    }, 300); 
-  };
-
-  const handleItemTouchStart = (id) => {
-    setActiveItem(id);
-  };
-
-  const handleItemTouchEnd = () => {
-    setTimeout(() => setActiveItem(null), 150);
   };
 
   const navItems = [
@@ -82,7 +67,7 @@ const Navbar = () => {
     { label: 'About', id: 'about' },
     { label: 'Features', id: 'features' },
     { label: 'Solutions', id: 'solutions' },
-    { label: 'Contact', id: 'cta' }
+    { label: 'Contact', id: 'contact' }
   ];
 
   return (
@@ -100,12 +85,8 @@ const Navbar = () => {
             {navItems.map((item) => (
               <li 
                 key={item.id}
-                onClick={() => handleItemClick(item.id)}
-                onTouchStart={() => handleItemTouchStart(item.id)}
-                onTouchEnd={handleItemTouchEnd}
-                onMouseEnter={() => window.innerWidth > 768 && setActiveItem(item.id)}
-                onMouseLeave={() => window.innerWidth > 768 && setActiveItem(null)}
-                className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
+                onClick={() => scrollToSection(item.id)}
+                className="nav-item"
               >
                 {item.label}
               </li>
