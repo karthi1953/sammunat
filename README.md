@@ -29,7 +29,7 @@ The project focuses on clean UI, mobile-first design, and real-world component s
 ---
 
 ## Live Demo 🌐
-🔗 **Live URL:** [https://your-vercel-link.vercel.app](https://sammunatlanding.vercel.app/)
+🔗 **Live URL:** [https://sammunatlanding.vercel.app](https://sammunatlanding.vercel.app/)
 
 ---
 
@@ -40,7 +40,6 @@ git clone https://github.com/karthi1953/sammunat.git
 cd sammunat
 npm install
 npm run dev
-~~~
 
 
 The app will be available at:
