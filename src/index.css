@@ -1,3 +1,23 @@
+:root {
+  --color-orange: #ff6b00;
+  --color-orange-light: #ff8b33;
+  --color-orange-dark: #cc5500;
+  --color-dark: #1a1a1a;
+  --color-gray: #6c757d;
+  --color-light-gray: #f8f9fa;
+  --color-white: #ffffff;
+  
+  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,28 +29,29 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body);
+  color: var(--color-dark);
   line-height: 1.6;
-  color: #333;
+  background-color: var(--color-white);
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 0;
+    padding: 80px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
   }
 }

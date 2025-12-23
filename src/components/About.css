@@ -1,26 +1,5 @@
 .about {
-    background-color: white;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e293b;
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-  }
-  
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: #2563eb;
-    border-radius: 2px;
+    background-color: var(--color-white);
   }
   
   .about-content {
@@ -29,21 +8,27 @@
   }
   
   .about-text {
-    font-size: 1.125rem;
-    color: #4b5563;
+    font-size: 18px;
+    color: var(--color-gray);
     line-height: 1.8;
   }
   
   .about-text p {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about-highlight {
+    color: var(--color-orange);
+    font-weight: 600;
   }
   
   @media (max-width: 768px) {
-    .section-title {
-      font-size: 2rem;
-    }
-    
     .about-text {
-      font-size: 1rem;
+      font-size: 16px;
+      line-height: 1.7;
     }
   }

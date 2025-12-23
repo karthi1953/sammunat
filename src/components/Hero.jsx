@@ -10,10 +10,11 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
+      <div className="hero-grid"></div> 
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Crafting Project Specific Solutions with Expertise!
+            Crafting Project Specific Solutions with Expertise
           </h1>
           <p className="hero-subtext">
             We're a creative company that focuses on establishing long-term partnership with customers.
@@ -25,6 +26,9 @@ const Hero = () => {
             Explore Now
           </button>
         </div>
+      </div>
+      <div className="hero-decoration"> 
+        <span></span>
       </div>
     </section>
   )

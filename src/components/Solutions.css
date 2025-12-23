@@ -1,73 +1,83 @@
-/* src/components/Solutions.css - NEW STYLES */
 .solutions {
-    background-color: #f8fafc;
-    padding: 80px 0;
+    background-color: var(--color-white);
   }
   
   .solutions-intro {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 50px;
-    font-size: 1.125rem;
-    color: #4b5563;
+    margin: 0 auto 60px;
+    font-size: 18px;
+    color: var(--color-gray);
     line-height: 1.7;
   }
   
   .solutions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    gap: 32px;
   }
   
   .solution-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--color-white);
+    padding: 48px 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--color-orange);
   }
   
   .solution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 107, 0, 0.1);
   }
   
   .solution-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 24px;
+    display: block;
   }
   
   .solution-card h3 {
-    font-size: 1.5rem;
-    color: #1e293b;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 16px;
   }
   
   .solution-card p {
-    color: #64748b;
+    color: var(--color-gray);
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
+    font-size: 16px;
   }
   
   .solution-button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 6px;
+    background-color: transparent;
+    color: var(--color-orange);
+    border: 2px solid var(--color-orange);
+    padding: 12px 32px;
+    font-size: 16px;
     font-weight: 600;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   .solution-button:hover {
-    background-color: #1d4ed8;
-  }
-  
-  @media (max-width: 768px) {
-    .solutions-grid {
-      grid-template-columns: 1fr;
-    }
+    background-color: var(--color-orange);
+    color: var(--color-white);
   }
